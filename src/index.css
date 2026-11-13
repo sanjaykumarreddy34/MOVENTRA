@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #060b19;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* MOVENTRA 3D Highlighted Metallic Shimmer Animation */
+@keyframes moventra3dSweep {
+  0% {
+    background-position: 0% 50%;
+    transform: perspective(600px) rotateX(0deg) translateZ(0px);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: perspective(600px) rotateX(3deg) translateZ(4px);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: perspective(600px) rotateX(0deg) translateZ(0px);
+  }
+}
+
+.moventra-3d-brand {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: linear-gradient(
+    115deg,
+    #e2e8f0 0%,
+    #60a5fa 22%,
+    #38bdf8 40%,
+    #ffffff 50%,
+    #818cf8 65%,
+    #3b82f6 85%,
+    #e2e8f0 100%
+  );
+  background-size: 240% 240%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 8px 28px rgba(59, 130, 246, 0.35);
+  animation: moventra3dSweep 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moventra-3d-brand {
+    animation: none;
+  }
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080f21;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

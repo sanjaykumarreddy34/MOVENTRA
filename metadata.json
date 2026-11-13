@@ -1,0 +1,6 @@
+{
+  "name": "MOVENTRA",
+  "description": "Premium 3D Indian Packers & Movers platform featuring photorealistic Three.js logistics scenes, Google Maps route planning, 5-step smart booking, live shipment tracking, and fleet operations console.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
